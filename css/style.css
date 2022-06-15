@@ -4,5 +4,13 @@
 }
 
 body {
-  max-width: 1256px;
+  max-width: 1440px;
+}
+
+.skills h4 {
+  padding: 1.25em;
+}
+
+.icon {
+  padding: 1em;
 }
