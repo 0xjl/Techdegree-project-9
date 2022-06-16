@@ -1,12 +1,16 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
-.body {
+body {
   max-width: 1440px;
-  margin: 0 auto;
-  background-color: white;
+}
+
+button {
+  padding: 0 1em;
+  border-radius: 50%;
 }
 
 .icon {
@@ -15,15 +19,19 @@
 
 .card {
   margin-top: 2em;
-  width: 18rem;
+  width: 300px;
 }
 
-.navbar {
-  border: none;
+.card img {
+  height: 225px;
 }
 
-.navbar button {
-  width: 25%;
+.navbar-nav {
+  margin-left: auto;
+}
+
+.toggle-button {
+  height: 80px;
 }
 
 footer svg {
