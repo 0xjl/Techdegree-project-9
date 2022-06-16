@@ -2,20 +2,37 @@ const intro = document.querySelector(".intro");
 const logo = document.querySelector(".logo-header");
 const logoSpan = document.querySelectorAll(".logo");
 const loading = document.querySelector(".loading-container");
-const buttonToggle = document.getElementById("darkmode");
-const body = document.querySelector(".body");
+let buttonToggle = document.getElementById("darkmode");
+let body = document.querySelector(".all");
+let svgICONS = document.querySelectorAll(".svg-icon");
 
-buttonToggle.addEventListener("click", () => {
-  if (body.style.backgroundColor === "white") {
-    body.style.backgroundColor = "black";
-    body.style.color = "white";
-  } else {
-    body.style.backgroundColor = "white";
-    body.style.color = "black";
+function buttonChecker() {
+  if (buttonToggle.innerText === "dark mode") {
+    buttonToggle.innerText = "light mode";
+    darkMode();
+  } else if (buttonToggle.innerText === "light mode") {
+    buttonToggle.innerText = "dark mode";
+    lightMode();
   }
-});
+}
 
-/* INTRO SECTION */
+//functions
+function darkMode() {
+  body.style.backgroundColor = "black";
+  body.style.color = "white";
+  for (let i = 0; i < svgICONS.length; i++) {
+    svgICONS[i].style.fill = "white";
+  }
+}
+
+function lightMode() {
+  body.style.backgroundColor = "white";
+  body.style.color = "black";
+  for (let i = 0; i < svgICONS.length; i++) {
+    svgICONS[i].style.fill = "black";
+  }
+}
+
 function fadeText() {
   logoSpan.forEach((span, index) => {
     setTimeout(() => {
@@ -48,4 +65,6 @@ function introEffect() {
   setTimeout(loadingScreen, 4000);
 }
 
+//event listeners
+buttonToggle.addEventListener("click", buttonChecker);
 window.addEventListener("DOMContentLoaded", introEffect);
