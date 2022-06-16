@@ -10,7 +10,7 @@
     <title>Personal Website</title>
 </head>
 
-<body class="mx-auto">
+<body class="body">
     <!--  <div class="intro">
         <h1 class="logo-header">
             <span class="logo">Hello</span> <span class="logo">I am Johan Lourens</span>
@@ -24,8 +24,8 @@
 
     <header>
         <!-- NAVBAR -->
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="#">Johan Lourens</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,10 +38,13 @@
                         <a class="nav-item nav-link" href="#">Contact</a>
                     </div>
                 </div>
-            </nav>
-        </div>
+            </div>
+
+        </nav>
+
     </header>
     <main>
+        <button id="darkmode">press</button>
         <!-- HERO SECTION -->
         <section class="container-fluid px-4 py-5 my-5 text-center hero">
             <img class="d-block mx-auto mb-4" src="" alt="" width="72" height="57">
@@ -180,18 +183,18 @@
             </div>
 
         </section>
+        <!-- CONTACT FORM -->
         <section class="container-fluid">
-            <form class="form">
-                <div class="mb-3">
-                    <label for="message" class="form-label">Enter message:</label>
-                    <textarea class="form-control" rows="5" cols="30" id="message"></textarea>
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="name@example.com">
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email:</label>
-                    <input type="email" class="form-control" id="email">
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
-
-                <button type="submit" class="btn btn-primary">Send message</button>
             </form>
         </section>
     </main>
