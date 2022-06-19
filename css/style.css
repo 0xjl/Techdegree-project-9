@@ -5,7 +5,7 @@
 }
 
 body {
-  max-width: 2000px;
+  max-width: 1440px;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -88,6 +88,10 @@ footer {
 
 /* INTRO SECTION */
 .loading-container {
+  position: absolute;
+  width: 50%;
+  right: 25%;
+  bottom: 50%;
   color: white;
 }
 
@@ -143,11 +147,9 @@ footer {
 @keyframes loading {
   0% {
     transform: scaleX(0);
-    offset: 0;
   }
   100% {
     transform: scaleX(1);
-    offset: 1;
   }
 }
 
